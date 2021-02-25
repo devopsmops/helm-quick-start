@@ -6,11 +6,10 @@
 
 # Helm - Быстрый старт
 Еще больше полезной информации - [Youtube](https://www.youtube.com/channel/UCqC3c7UHtwoX2wy7fdHc6gg) и [Telegram](https://t.me/devops_mops)
-<br><br>
+
+<br>
 
 **Helm** - пакетный менеджер для Kubernetes
-
-> В отличие от привычных пакетных мененджеров, таких как Yum и Apt, Helm не отслеживает зависимости.
 
 <br>
 
