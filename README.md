@@ -190,7 +190,7 @@ helm ls --namespace <namespace_name>
 ```
 <br>
 
-Загрузить информацию об установленных релизах
+Вывести информацию о релизе
 ```
 helm get <option> <release_name>
 ```
@@ -201,12 +201,6 @@ helm get <option> <release_name>
 > notes<br>
 > values<br>
 
-<br>
-
-Информация о релизе
-```
-helm show <release_name>
-```
 <br>
 
 Откат к предыдущей версии релиза
