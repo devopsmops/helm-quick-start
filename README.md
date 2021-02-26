@@ -108,9 +108,29 @@ helm pull --untar <chart_name>
 ```
 <br>
 
-Получить информацию из чарта
+
+Получить всю информацию из чарта
+```
+helm show <option> <chart_name>
+```
+Команда поддерживает опции:
+> all<br>
+> hooks<br>
+> manifest<br>
+> notes<br>
+> values<br>
+
+<br>
+
+Получить всю информацию из чарта
 ```
 helm show all <my_chart.tgz>
+```
+<br>
+
+Получить values из чарта и сохранить локально
+```
+helm show values <chart_name> > values.yaml
 ```
 <br>
 
@@ -118,11 +138,11 @@ helm show all <my_chart.tgz>
 
 Установить релиз
 ```
-helm install <release_name> <chart_name>
+helm install <release_name> <chart_name> --namespace <namespace_name>
 ```
 или
 ```
-helm upgrade -i <release_name> <chart_name>
+helm upgrade -i <release_name> <chart_name> --namespace <namespace_name>
 ```
 
 > Ключ -f позволяет указать определенный файл values
@@ -152,7 +172,7 @@ helm upgrade <release_name> <chart_name>
 ## Управление релизами
 Показать список установленных релизов
 ```
-helm list
+helm list 
 ```
 или
 ```
@@ -161,6 +181,14 @@ helm ls
 <br>
 
 > Чтобы вывести все релизы (даже если статус отличается от DEPLOYED) укажите ключ ***--all***
+
+<br>
+
+Показать список установленных релизов в определенном namespace
+```
+helm ls --namespace <namespace_name>
+```
+<br>
 
 Загрузить информацию об установленных релизах
 ```
@@ -217,6 +245,47 @@ helm lint
 ```
 helm package my-chart
 ```
+<br>
+
+## Плагины
+
+Установить плагин
+```
+helm plugin install
+```
+
+Показать установленные плагины
+```
+helm plugin list
+```
+
+Обновить плагин
+```
+helm plugin update
+```
+
+Удалить плагин
+```
+helm plugin uninstall
+```
+<br>
+
+**Популярные плагины:**
+
+- [helm-2to3](https://github.com/helm/helm-2to3)<br>
+Плагин поможет конертировать ваши чарты для Helm2 в чарты для Helm3
+- [helm-diff](https://github.com/databus23/helm-diff)<br>
+Плагин показывает разницу между текущим состоянием релиза и состоянием после обновления из указанного чарта
+- [helm-env](https://github.com/adamreese/helm-env)<br>
+Плагин показывает переменные окружения Helm
+- [helm-kubeval](https://github.com/instrumenta/helm-kubeval)<br>
+Плагин для проверки соответствия чартов схемам Kubernetes
+
+## Полезные ссылки
+
+- [The Chart Best Practices Guide](https://helm.sh/docs/chart_best_practices/)
+- [Awesome Helm](https://github.com/cdwv/awesome-helm)
+
 <br>
 
 ---
