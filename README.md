@@ -19,6 +19,7 @@
 - [Установка и обновление](#Установка-и-обновление)
 - [Управление релизами](#Управление-релизами)
 - [Создание собственных чартов](#Создание-собственных-чартов)
+- Полезные ссылки
 
 <br>
 
@@ -52,12 +53,18 @@ chmod 700 get_helm.sh
 
 > Файл чарта также называют артефактом
 
-Популярные репозитории:
+Public Registry:
 - Artifact Hub
 https://artifacthub.io/
 - Bitnami
 https://bitnami.com/
 - Репозиторий на GitHub больше не поддерживается
+  
+Private Registry:
+- [Harbor](https://goharbor.io/)
+- [Nexus](https://www.sonatype.com/products/repository-oss?topnav=true)
+- [Artifactory](https://jfrog.com/artifactory/)
+- [GitLab](https://about.gitlab.com/)
 
 Добавить репозиторий Artifact Hub
 ```
