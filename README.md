@@ -233,13 +233,6 @@ helm create my-chart
 ```
 helm lint
 ```
-<br>
-
-Создать чарт, используя файлы из папки ./my-chart
-```
-helm package my-chart
-```
-<br>
 
 ## Плагины
 
